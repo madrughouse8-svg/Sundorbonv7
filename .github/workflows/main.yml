@@ -14,25 +14,32 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          
+          node-version: 22
+
+      - name: Verify Node.js
+        run: |
+          node --version
+          npm --version
 
       - name: Install dependencies
         run: npm install
 
-      - name: Match Capacitor Android version
+      - name: Install Capacitor Android
         run: |
           CAP_VERSION=$(node -p "require('./node_modules/@capacitor/core/package.json').version")
           echo "Capacitor version: $CAP_VERSION"
           npm install @capacitor/android@$CAP_VERSION
 
+      - name: Verify Capacitor CLI
+        run: npx cap --version
+
       - name: Add Android platform
         run: npx cap add android
 
-      - name: Sync web app with Android
+      - name: Sync web app
         run: npx cap sync android
 
       - name: Setup Java
