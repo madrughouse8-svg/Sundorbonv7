@@ -1,0 +1,15 @@
+{
+  "name": "sundarban-drag-house-apk",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Android wrapper for the existing Sundarban Drug House offline PWA",
+  "scripts": {
+    "build": "mkdir -p www && cp index.html script0.js script1.js sw.js manifest.webmanifest icon.svg cover-demo.jpg app-original.html backup-original.json backup-latest-2026-09-20.json README.md www/"
+  },
+  "dependencies": {
+    "@capacitor/core": "8.5.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2"
+  }
+}

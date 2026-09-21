@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<rect width="128" height="128" rx="30" fill="#0b5cab"/>
+<path d="M22 63h84" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+<rect x="27" y="38" width="74" height="22" rx="11" fill="#fff"/>
+<rect x="27" y="68" width="74" height="22" rx="11" fill="#fff"/>
+<circle cx="88" cy="49" r="9" fill="#0b5cab"/>
+<circle cx="40" cy="79" r="9" fill="#0b5cab"/>
+<text x="64" y="113" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#fff">SDH</text>
+</svg>
