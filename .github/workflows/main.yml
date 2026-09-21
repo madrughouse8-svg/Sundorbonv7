@@ -1,4 +1,4 @@
-name: Build Sundarban Drug House APK
+typescript: Build Sundarban Drug House APK
 
 on:
   workflow_dispatch:
@@ -24,8 +24,10 @@ jobs:
           node --version
           npm --version
 
-      - name: Install dependencies
-        run: npm install
+      -       - name: Install dependencies
+        run: |
+          npm install
+          npm install --save-dev typescript
 
       - name: Install Capacitor Android
         run: |
