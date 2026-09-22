@@ -40,7 +40,16 @@ jobs:
 
       - name: Add Android platform
         run: npx cap add android
-
+      - name: Prepare web assets
+        run: |
+          mkdir -p www
+          cp index.html www/
+          cp -r *.js www/ 2>/dev/null || true
+          cp -r *.css www/ 2>/dev/null || true
+          cp -r *.json www/ 2>/dev/null || true
+          cp -r *.webmanifest www/ 2>/dev/null || true
+          cp -r *.svg www/ 2>/dev/null || true
+          cp -r public/* www/ 2>/dev/null || true
       - name: Sync web app
         run: npx cap sync android
 
